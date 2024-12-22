@@ -1,0 +1,27 @@
+import React from 'react';
+
+const Navbar = () => {
+  const items = [
+    { id: 1, text: "About" },
+    { id: 2, text: "Services" },
+    { id: 3, text: "Contact" },
+  ];
+
+  return (
+    <div className="bg-yellow-50 text-black w-full">
+      <div className="container mx-auto p-4 hidden flex justify-between items-center">
+        <div className="text-xl md:text-2xl font-bold flex items-center gap-1">
+          <span className="text-black">Juan</span>
+          <span className="text-blue-800">Marcos</span>
+        </div>
+        <ul className="flex space-x-6 items-center list-none text-lg">
+          {items.map(({ id, text }) => ( //Use to find the items for navbar
+            <li key={id} className='hover:text-blue-500 duration-200 cursor-pointer'>{text}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
