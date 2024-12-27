@@ -50,14 +50,14 @@ const Navbar = () => {
       {menu && (
         <div className='md:hidden bg-yellow-50 py-6 justify-center items-center gap-2 text-lg text-black flex flex-col list-none shadow-sm'>
           {items.map(({ id, text }) => ( //Items or menu to pop-up in icon menu
-            <li
+            <li 
              key={id} className='hover:text-blue-500 duration-200 cursor-pointer border-b w-11/12 '
              >
               {text}
              </li>
           ))}
-
-          <a href={CV} download="CV.pdf" className='text-lg bg-blue-900 text-white px-4 py-2 mt-3 rounded-full hover:bg-blue-800'>
+          
+          <a href={CV} download="CV.pdf" className='text-lg bg-blue-900 text-white px-4 py-2 mt-3 rounded-full hover:bg-blue-800'> 
            Download Resume
           </a>
         </div>
