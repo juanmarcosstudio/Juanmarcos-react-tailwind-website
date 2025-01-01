@@ -1,5 +1,5 @@
 import aboutImg from '../aboutImg.png';
-import CV from "../cv.pdf";
+
 
 const About = () => {
   return (
