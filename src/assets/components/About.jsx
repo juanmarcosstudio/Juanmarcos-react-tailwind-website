@@ -15,10 +15,10 @@ const About = () => {
             className='w-full h-auto object-cover' />
         </div>
         {/*Right section*/}
-            <div>
-                <h3>A Bit</h3>
-                <h2>About Me</h2>
-                <p>
+            <div className='w-full md:w-1/2 md:pl-12' >
+                <h3 className='text-blue-700 font-semibold text-lg uppercase mb-4'>A Bit</h3>
+                <h2 className='text-4xl md:text-6xl font-bold text-gray-800 mb-6'>About Me</h2>
+                <p className='text-gray-600 mb-6'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum risus elit, vel facilisis leo tincidunt in. Maecenas eget risus quis lectus ultricies tincidunt aliquet et ex. Donec a leo eget eros facilisis euismod sit amet in dui. Nunc pretium erat cursus ante tincidunt, aliquam eleifend nisi sollicitudin. Sed vehicula condimentum ex a placerat. Quisque feugiat et neque ut efficitur.
                 </p>
 
