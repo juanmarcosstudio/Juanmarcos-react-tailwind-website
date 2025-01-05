@@ -1,4 +1,3 @@
-import React from 'react'
 import service1 from "../service1.png"
 import service2 from "../service2.png"
 import service3 from "../service3.png"
