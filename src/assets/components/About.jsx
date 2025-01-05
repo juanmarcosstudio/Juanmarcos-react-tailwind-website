@@ -1,6 +1,6 @@
 import aboutImg from '../aboutImg.png';
 import CV from "../cv.pdf";
-import {FaRegHandshake, FaRegFolderOpen} from "react-icons/fa"
+import {FaRegHandshake,} from "react-icons/fa"
 import {MdSupportAgent} from "react-icons/md"
 import {BsDownload} from "react-icons/bs"
 
