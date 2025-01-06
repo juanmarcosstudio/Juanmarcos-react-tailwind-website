@@ -25,8 +25,45 @@ const Contact = () => {
         <form action='#' method='POST' className='w-11/12 space-y-4'>
             <div>
                 <label htmlFor='name' className='block text-sm font-medium text-gray-700'>Name
-                    <span></span>
+                    <span className='text-red-500'>*</span>
                 </label>
+                <input 
+                type='text'
+                id='name'
+                name='name'
+                required
+                placeholder='Your Name'
+                className='mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-yellow-400 focus:border-yellow-500' />
+            </div>
+            <div>
+                <label className='block text-sm font-medium text-gray-700' 
+                htmlFor='website'>
+                    Website
+                </label>
+                <input 
+                type='url'
+                id='website'
+                name='website'
+                placeholder='Your Website (Optional)'
+                className='mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-yellow-400 focus:border-yellow-500' />
+            </div>
+            <div>
+                <label className='block text-sm font-medium text-gray-700'
+                htmlFor='message'>
+                    Message
+                </label>
+                <textarea
+                id='message'
+                name='message'
+                rows='4'
+                className='mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-yellow-400 focus:border-yellow-500' 
+                placeholder='Your Message'
+                ></textarea>
+            </div>
+            <div>
+                <button type='submit'
+                className='w-full py-2 px-4 bg-blue-700 text-white font-semibold rounded-md hover:bg-yellow-400 focus:outline-none focus-ring-2 focus:ring-blue-500 focus:ring-offset-2'
+                >Submit</button>
             </div>
         </form>
       </div>
