@@ -7,7 +7,7 @@ import {BsDownload} from "react-icons/bs"
 
 const About = () => {
   return (
-    <div className='py-16 bg-gray-50' >
+    <div className='py-5 bg-gray-50' >
         <div className='container mx-auto px-6 lg:px-14 flex flex-col md:flex-row items-center justify-between py-16 bg-gray-50' >
         <div className='w-52 md:w-72 mb-8 md:mb-0 ml-0 md:ml-30' >
             <img src={aboutImg}
