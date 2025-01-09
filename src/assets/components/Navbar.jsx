@@ -1,7 +1,8 @@
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import { useState } from 'react';
-import CV from '../cv.pdf'
+import CV from '../cv.pdf';
+import {Link} from "react-scroll"
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false)
@@ -53,7 +54,7 @@ const Navbar = () => {
             <li 
              key={id} className='hover:text-blue-500 duration-200 cursor-pointer border-b w-11/12 '
              >
-              {text}
+              <Link>{text}</Link>
              </li>
           ))}
           
