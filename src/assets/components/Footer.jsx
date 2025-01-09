@@ -16,8 +16,25 @@ const Footer = () => {
                     <li><a href='#'>Blog</a></li>
                 </ul>
             </div>
+            <div className='space-y-4'>
+            <h3 className='font-medium text-gray-700'>EXPLORE</h3>
+                <ul className='text-gray-500 space-y-2'>
+                    <li><a href='#'>Support</a></li>
+                    <li><a href='#'>About Me</a></li>
+                    <li><a href='#'>Blog</a></li>
+                </ul>
+            </div>
+            <div className='space-y-4'>
+            <h3 className='font-medium text-gray-700'>EXPLORE</h3>
+                <ul className='text-gray-500 space-y-2'>
+                    <li><a href='#'>Support</a></li>
+                    <li><a href='#'>About Me</a></li>
+                    <li><a href='#'>Blog</a></li>
+                </ul>
+            </div>
         </div>
       </div>
+      <div className='mt-8 bg-blue-800 h-2 w-full'>why</div>
     </div>
   )
 }
