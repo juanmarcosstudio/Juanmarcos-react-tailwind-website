@@ -21,7 +21,7 @@ const Hero = () => {
             <button className="bg-[#eab949] px-10 py-1 rounded-full mr-4 hover:bg-[#4370d8] text-white duration-200" >
               Contact
             </button>
-            <a className="flex items-center text-[#eab949] font-semibold" href={CV} download="CV.pdf">
+            <a className="flex items-center text-[#eab949] font-semibold" href={CV} download="jhonmarkresume.pdf">
                 
                     Download Resume <BsDownload className="ml-2 text-lg" />
                 
