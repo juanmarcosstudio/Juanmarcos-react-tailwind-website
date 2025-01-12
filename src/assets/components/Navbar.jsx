@@ -33,7 +33,7 @@ const Navbar = () => {
              </li>
           ))}
         </div>
-        <a href={CV} download="CV.pdf" className='text-lg bg-[#eab949] text-white px-4 py-2 rounded-full hover:bg-[#4370d8]'>
+        <a href={CV} download="jhonmarkresume.pdf" className='text-lg bg-[#eab949] text-white px-4 py-2 rounded-full hover:bg-[#4370d8]'>
           Download Resume
         </a>
       </div>
