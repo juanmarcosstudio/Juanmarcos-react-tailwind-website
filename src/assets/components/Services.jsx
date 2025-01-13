@@ -14,17 +14,23 @@ const Services = () => {
       </div>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
         <div className='bg-gray-50 rounded-lg shadow-lg p-6'>
-            <img src={service1} alt='service1' className='w-full h-48 object-cover rounded-lg mb-4' />
+          <div className='overflow-hidden rounded-lg mb-4'>
+            <img src={service1} alt='service1' className='w-full h-48 object-cover rounded-lg mb-4 hover:scale-110' />
+          </div>
             <h3 className='text-2xl font-semibold text-[#353A3A] mb-2'>Web Development Services</h3>
             <p className='text-gray-600 mb-4'>From concept to completion, I strive to deliver responsive and user-focused designs that reflect creativity and functionality. My goal is to create websites that leave a lasting impression and perform flawlessly.</p>
         </div>
         <div className='bg-gray-50 rounded-lg shadow-lg p-6'>
-        <img src={service2} alt='service2' className='w-full h-48 object-cover rounded-lg mb-4' />
+          <div className="overflow-hidden rounded-lg mb-4">
+            <img src={service2} alt='service2' className='w-full h-48 object-cover rounded-lg mb-4 hover:scale-110' />
+          </div>
             <h3 className='text-2xl font-semibold text-[#353A3A] mb-2'>Creative Services</h3>
             <p className='text-gray-600 mb-4'>Bring ideas to life with visually stunning and impactful designs. From logo creation and branding to graphic design and content development, I focus on delivering creative solutions that resonate with your audience. Whether it’s digital or print, every project is crafted with attention to detail and a passion for excellence.</p>
         </div>
         <div className='bg-gray-50 rounded-lg shadow-lg p-6'>
-        <img src={service3} alt='service3' className='w-full h-48 object-cover rounded-lg mb-4' />
+          <div className="overflow-hidden rounded-lg mb-4">
+            <img src={service3} alt='service3' className='w-full h-48 object-cover rounded-lg mb-4 hover:scale-110' />
+          </div>
             <h3 className='text-2xl font-semibold text-[#353A3A] mb-2'>Additional Options</h3>
             <p className='text-gray-600 mb-4'>Offer a variety of services to help your business grow. From managing your social media and running digital marketing campaigns to setting up email marketing and online stores, I’m here to make sure your brand reaches the right people.</p>
         </div>
