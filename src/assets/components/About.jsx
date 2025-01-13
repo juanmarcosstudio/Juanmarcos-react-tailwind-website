@@ -3,6 +3,7 @@ import CV from "../cv.pdf";
 import {FaRegHandshake,} from "react-icons/fa"
 import {MdSupportAgent} from "react-icons/md"
 import {BsDownload} from "react-icons/bs"
+import { Link } from 'react-scroll';
 
 
 const About = () => {
@@ -42,7 +43,16 @@ const About = () => {
                     </div>
                 </div>
                 <div className='flex items-center' >
-                    <button className='bg-[#eab949] text-white px-10 py-1 rounded-full mr-4 hover:bg-[#4370d8]' >Contact</button>
+                    
+                        <Link
+                        to="contact"
+                        smooth={true}
+                        duration={500}
+                        className="bg-[#eab949] text-white px-10 py-1 rounded-full mr-4 hover:bg-[#4370d8] cursor-pointer"
+                        >
+                            Contact
+                        </Link>
+                        
                     <a className='flex items-center text-[#eab949] font-semibold' href={CV} download="jhonmarkresume.pdf" >
                         Download Resume<BsDownload className='ml-2 text-lg' />
                     </a>
