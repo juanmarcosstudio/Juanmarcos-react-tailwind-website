@@ -38,13 +38,15 @@ const Contact = () => {
           </div>
           <div>
             <label className='block text-sm font-medium text-gray-700' htmlFor='website'>
-              Website
+              Email
+              <span className='text-red-500'>*</span>
             </label>
             <input
-              type='url'
-              id='website'
-              name='website'
-              placeholder='Your Website (Optional)'
+              type='email'
+              id='email'
+              name='email'
+              required
+              placeholder='Your Email'
               className='mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-yellow-400 focus:border-yellow-500' />
           </div>
           <div>
