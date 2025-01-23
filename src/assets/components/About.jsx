@@ -20,7 +20,7 @@ const About = () => {
             
                 <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>About Me</h2>
                 <p className='text-white mb-6'>
-                Howdy! I amm Jhon Mark from the Philippines. I love spending time in coffee shops, enjoying the atmosphere and playing musical instruments. Coffee helps me stay focused and energized while I work. I am dedicated to doing my best in everything I do and always try to stay positive and professional.
+                Howdy! I am Jhon Mark from the Philippines. I love spending time in coffee shops, enjoying the atmosphere and playing musical instruments. Coffee helps me stay focused and energized while I work. I am dedicated to doing my best in everything I do and always try to stay positive and professional.
                 </p>
 
                 <div className='flex flex-wrap mb-6'>
