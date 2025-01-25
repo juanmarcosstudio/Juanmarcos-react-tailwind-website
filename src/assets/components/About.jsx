@@ -15,7 +15,6 @@ const About = () => {
             alt='About Me'
             className='w-full h-auto object-cover' />
         </div>
-        {/*Right section*/}
             <div className='w-full md:w-1/2 md:pl-12' >
             
                 <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>About Me</h2>
