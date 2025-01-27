@@ -13,7 +13,7 @@ const Contact = () => {
           </div>
           <div className='space-y-4 text-white'>
             <FiMapPin className='text-[#eab949] w-6 h-6'/>
-            <span>Pangasinan, Philippines</span>
+            <span>San Carlos City, Pangasinan, Philippines</span>
           </div>
           <div className='space-y-4 text-white'>
             <FiGithub className='text-[#eab949] w-6 h-6'/>
