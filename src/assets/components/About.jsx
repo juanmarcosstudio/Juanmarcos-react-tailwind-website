@@ -49,7 +49,7 @@ const About = () => {
                         duration={500}
                         className="bg-[#eab949] text-white px-10 py-1 rounded-full mr-4 hover:bg-[#4370d8] cursor-pointer"
                         >
-                            Contact
+                        Contact
                         </Link>
                         
                     <a className='flex items-center text-[#eab949] font-semibold' href={CV} download="jhonmarkresume.pdf" >
