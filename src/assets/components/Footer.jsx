@@ -8,7 +8,7 @@ const Footer = () => {
             <p className='mt-1 text-gray-500 md:pr-5'>Made with passion and dedication. Let’s work together to create something special!</p>
         </div>
       </div>
-      <div className='mt-8 bg-[#eab949] h-2 w-full'></div>
+      <div className='mt-8 bg-[#4370d8] h-2 w-full'></div>
     </div>
   )
 }
