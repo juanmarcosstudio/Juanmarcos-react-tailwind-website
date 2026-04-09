@@ -1,15 +1,62 @@
+import { FiGithub, FiMail } from "react-icons/fi"
+import { FaLinkedinIn } from "react-icons/fa"
 
 const Footer = () => {
   return (
-    <div className='bg-white mt-12 flex flex-col items-center'>
-      <div className='container flex flex-col md:flex-row justify-between px-5'>
-        <div className='mb-8 md:mb-0 md:w-1/4 mr-6 text-center md:text-start'>
-            <h2 className='text-3xl font-semibold text-[#eab949]'>Juan Marcos</h2>
-            <p className='mt-1 text-gray-500 md:pr-5'>Made with passion and dedication. Let’s work together to create something special!</p>
+    <footer className="bg-[#353A3A]">
+      {/* Gradient top border */}
+      <div className="h-1 bg-gradient-to-r from-[#eab949] to-[#4370d8]" />
+
+      <div className="container mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
+        {/* Brand */}
+        <div className="text-center md:text-left">
+          <h2 className="text-2xl font-bold">
+            <span className="text-white">Juan</span>
+            <span className="text-[#eab949]"> Marcos</span>
+          </h2>
+          <p className="text-gray-400 text-sm mt-1 max-w-xs">
+            Made with passion and dedication. Let&apos;s work together to create
+            something special!
+          </p>
+        </div>
+
+        {/* Social icons */}
+        <div className="flex items-center gap-5">
+          <a
+            href="https://github.com/juanmarcosstudio"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            className="text-gray-400 hover:text-[#eab949] hover:drop-shadow-[0_0_8px_rgba(234,185,73,0.8)] transition-all duration-300"
+          >
+            <FiGithub size={22} />
+          </a>
+          <a
+            href="mailto:jhonmarktamayo134@gmail.com"
+            aria-label="Email"
+            className="text-gray-400 hover:text-[#eab949] hover:drop-shadow-[0_0_8px_rgba(234,185,73,0.8)] transition-all duration-300"
+          >
+            <FiMail size={22} />
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+            className="text-gray-400 hover:text-[#4370d8] hover:drop-shadow-[0_0_8px_rgba(67,112,216,0.8)] transition-all duration-300"
+          >
+            <FaLinkedinIn size={22} />
+          </a>
         </div>
       </div>
-      <div className='mt-8 bg-[#4370d8] h-2 w-full'></div>
-    </div>
+
+      {/* Copyright */}
+      <div className="border-t border-white/10 py-4">
+        <p className="text-center text-gray-500 text-xs">
+          © {new Date().getFullYear()} Juan Marcos. All rights reserved.
+        </p>
+      </div>
+    </footer>
   )
 }
 

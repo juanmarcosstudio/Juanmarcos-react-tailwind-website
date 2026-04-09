@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Active nav link (set by react-scroll spy) */
+.nav-active {
+  color: #eab949 !important;
+  border-bottom: 2px solid #eab949;
+  padding-bottom: 2px;
+}

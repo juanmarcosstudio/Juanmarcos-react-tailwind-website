@@ -30,36 +30,45 @@ const services = [
 const Services = () => {
   return (
     <div id="services" className="bg-white py-16 px-8">
-      <div className="container mx-auto px-6 lg:px-24 text-center mb-12">
-        <h3 className="text-[#353A3A] font-semibold text-lg uppercase mb-2">
-          What I Offer
-        </h3>
-        <h2 className="text-4xl font-bold text-[#eab949]">My Services</h2>
-      </div>
+      <div className="container mx-auto px-6 lg:px-24">
+        {/* Heading */}
+        <div className="text-center mb-14" data-aos="fade-up">
+          <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-2">
+            What I Offer
+          </h3>
+          <h2 className="text-4xl font-bold text-[#353A3A] mb-3">
+            My Services
+          </h2>
+          <div className="w-16 h-1 bg-[#eab949] mx-auto rounded-full" />
+        </div>
 
-      <div className="container mx-auto px-6 lg:px-24 grid grid-cols-1 md:grid-cols-3 gap-8">
-        {services.map(({ id, icon, title, description, tools }) => (
-          <div
-            key={id}
-            className="bg-gray-50 rounded-xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            {icon}
-            <h3 className="text-xl font-bold text-[#353A3A] mb-3">{title}</h3>
-            <p className="text-gray-600 mb-5 text-sm leading-relaxed">
-              {description}
-            </p>
-            <div className="flex flex-wrap justify-center gap-2 mt-auto">
-              {tools.map((tool) => (
-                <span
-                  key={tool}
-                  className="bg-[#353A3A] text-white text-xs px-3 py-1 rounded-full"
-                >
-                  {tool}
-                </span>
-              ))}
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map(({ id, icon, title, description, tools }, i) => (
+            <div
+              key={id}
+              data-aos="fade-up"
+              data-aos-delay={i * 100}
+              className="bg-gray-50 border border-transparent rounded-xl shadow-md p-8 flex flex-col items-center text-center hover:border-[#eab949] hover:shadow-[0_0_24px_rgba(234,185,73,0.2)] hover:-translate-y-1 transition-all duration-300"
+            >
+              {icon}
+              <h3 className="text-xl font-bold text-[#353A3A] mb-3">{title}</h3>
+              <p className="text-gray-600 mb-5 text-sm leading-relaxed">
+                {description}
+              </p>
+              <div className="flex flex-wrap justify-center gap-2 mt-auto">
+                {tools.map((tool) => (
+                  <span
+                    key={tool}
+                    className="bg-[#353A3A] text-white text-xs px-3 py-1 rounded-full"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )
