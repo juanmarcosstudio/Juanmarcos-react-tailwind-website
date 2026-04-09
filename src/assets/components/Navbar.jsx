@@ -3,6 +3,7 @@ import { IoClose } from "react-icons/io5"
 import { useState, useEffect } from "react"
 import CV from "../cv.pdf"
 import { Link } from "react-scroll"
+import ThemeToggle from "./ThemeToggle"
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false)
@@ -25,14 +26,14 @@ const Navbar = () => {
     <div
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-[#353A3A]/80 backdrop-blur-md shadow-lg shadow-black/30"
-          : "bg-[#353A3A]"
+          ? "dark:bg-[#353A3A]/80 bg-[#f5f5f0]/80 backdrop-blur-md shadow-lg shadow-black/10"
+          : "dark:bg-[#353A3A] bg-[#f5f5f0]"
       }`}
     >
       {/* Desktop */}
       <div className="container mx-auto px-6 py-4 hidden md:flex justify-between items-center">
         <div className="text-xl md:text-2xl font-bold flex items-center gap-1">
-          <span className="text-white">Juan</span>
+          <span className="dark:text-white text-[#1a1a1a]">Juan</span>
           <span className="text-[#eab949]">Marcos</span>
         </div>
 
@@ -45,7 +46,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
                 activeClass="nav-active"
-                className="text-gray-300 hover:text-[#eab949] transition-colors duration-200 cursor-pointer pb-0.5"
+                className="dark:text-gray-300 text-gray-600 hover:text-[#eab949] transition-colors duration-200 cursor-pointer pb-0.5"
               >
                 {text}
               </Link>
@@ -53,33 +54,39 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <a
-          href={CV}
-          download="jhonmarkresume.pdf"
-          className="text-sm bg-[#eab949] text-[#353A3A] font-bold px-5 py-2 rounded-full hover:shadow-[0_0_16px_rgba(234,185,73,0.55)] hover:scale-105 transition-all duration-200"
-        >
-          Download CV
-        </a>
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <a
+            href={CV}
+            download="jhonmarkresume.pdf"
+            className="text-sm bg-[#eab949] text-[#353A3A] font-bold px-5 py-2 rounded-full hover:shadow-[0_0_16px_rgba(234,185,73,0.55)] hover:scale-105 transition-all duration-200"
+          >
+            Download CV
+          </a>
+        </div>
       </div>
 
       {/* Mobile header */}
       <div className="flex w-full justify-between items-center md:hidden px-4 py-3">
         <div className="text-xl font-bold flex items-center gap-1">
-          <span className="text-white">Juan</span>
+          <span className="dark:text-white text-[#1a1a1a]">Juan</span>
           <span className="text-[#eab949]">Marcos</span>
         </div>
-        <button
-          onClick={() => setMenu(!menu)}
-          aria-label="Toggle menu"
-          className="text-white"
-        >
-          {menu ? <IoClose size={28} /> : <IoMdMenu size={28} />}
-        </button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            onClick={() => setMenu(!menu)}
+            aria-label="Toggle menu"
+            className="dark:text-white text-[#1a1a1a]"
+          >
+            {menu ? <IoClose size={28} /> : <IoMdMenu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
       {menu && (
-        <div className="md:hidden bg-[#353A3A]/95 backdrop-blur-md py-6 flex flex-col items-center gap-1 text-base">
+        <div className="md:hidden dark:bg-[#353A3A]/95 bg-[#f5f5f0]/95 backdrop-blur-md py-6 flex flex-col items-center gap-1 text-base">
           {items.map(({ id, text, to }) => (
             <Link
               key={id}
@@ -89,7 +96,7 @@ const Navbar = () => {
               duration={500}
               activeClass="nav-active"
               onClick={() => setMenu(false)}
-              className="text-gray-300 hover:text-[#eab949] transition-colors duration-200 cursor-pointer w-10/12 py-3 border-b border-white/10"
+              className="dark:text-gray-300 text-gray-600 hover:text-[#eab949] transition-colors duration-200 cursor-pointer w-10/12 py-3 dark:border-b dark:border-white/10 border-b border-gray-200"
             >
               {text}
             </Link>

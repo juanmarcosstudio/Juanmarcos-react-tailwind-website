@@ -76,15 +76,15 @@ const Hero = () => {
 
   return (
     <div className="relative text-white flex flex-col-reverse md:flex-row justify-center items-center py-20 md:py-28 px-5 sm:px-10 lg:px-40 overflow-hidden">
-      {/* Gradient base */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#2a2e2e] via-[#353A3A] to-[#1e2222]" />
+      {/* Gradient base — dark / light */}
+      <div className="absolute inset-0 bg-gradient-to-br dark:from-[#2a2e2e] dark:via-[#353A3A] dark:to-[#1e2222] from-[#f0ede8] via-[#f5f5f0] to-[#eaeae6]" />
 
       {/* Dot grid overlay */}
       <div
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(rgba(234,185,73,0.12) 1px, transparent 1px)",
+            "radial-gradient(rgba(234,185,73,0.10) 1px, transparent 1px)",
           backgroundSize: "28px 28px",
         }}
       />
@@ -98,9 +98,9 @@ const Hero = () => {
         data-aos="fade-right"
       >
         {/* Available badge */}
-        <div className="inline-flex items-center gap-2 bg-[#2a2e2e] border border-[#eab949]/30 rounded-full px-4 py-1.5 mb-5">
+        <div className="inline-flex items-center gap-2 dark:bg-[#2a2e2e] bg-white border dark:border-[#eab949]/30 border-[#eab949]/40 rounded-full px-4 py-1.5 mb-5 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          <span className="text-xs text-gray-300 font-medium tracking-wide">
+          <span className="text-xs dark:text-gray-300 text-gray-600 font-medium tracking-wide">
             Available for freelance
           </span>
         </div>
@@ -112,7 +112,7 @@ const Hero = () => {
 
         {/* Name */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-2">
-          <span className="text-white">Jhon </span>
+          <span className="dark:text-white text-[#1a1a1a]">Jhon </span>
           <span className="text-[#eab949]">Mark</span>
         </h1>
 
@@ -123,7 +123,7 @@ const Hero = () => {
         </p>
 
         {/* Description */}
-        <p className="text-sm md:text-base text-gray-300 max-w-md mx-auto md:mx-0 leading-relaxed">
+        <p className="text-sm md:text-base dark:text-gray-300 text-gray-600 max-w-md mx-auto md:mx-0 leading-relaxed">
           I am learning advanced JavaScript, improving my React.js skills for
           building interactive user interfaces, and working on backend
           development with Node.js and Express to create efficient and scalable
@@ -158,7 +158,7 @@ const Hero = () => {
               target="_blank"
               rel="noreferrer"
               aria-label={label}
-              className="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 text-gray-400 hover:border-[#eab949] hover:text-[#eab949] hover:shadow-[0_0_10px_rgba(234,185,73,0.35)] transition-all duration-200"
+              className="w-9 h-9 flex items-center justify-center rounded-full border dark:border-white/20 border-gray-300 dark:text-gray-400 text-gray-500 hover:border-[#eab949] hover:text-[#eab949] hover:shadow-[0_0_10px_rgba(234,185,73,0.35)] transition-all duration-200"
             >
               <Icon size={16} />
             </a>
@@ -166,16 +166,18 @@ const Hero = () => {
         </div>
 
         {/* Stats row */}
-        <div className="flex items-center justify-center md:justify-start gap-6 mt-8 pt-6 border-t border-white/10">
+        <div className="flex items-center justify-center md:justify-start gap-6 mt-8 pt-6 dark:border-t dark:border-white/10 border-t border-gray-200">
           {stats.map(({ number, label }, i) => (
             <div key={label} className="flex items-center gap-6">
               <div className="text-center md:text-left">
                 <p className="text-2xl font-extrabold text-[#eab949] leading-none">
                   {number}
                 </p>
-                <p className="text-xs text-gray-400 mt-0.5">{label}</p>
+                <p className="text-xs dark:text-gray-400 text-gray-500 mt-0.5">{label}</p>
               </div>
-              {i < stats.length - 1 && <div className="w-px h-8 bg-white/15" />}
+              {i < stats.length - 1 && (
+                <div className="w-px h-8 dark:bg-white/15 bg-gray-300" />
+              )}
             </div>
           ))}
         </div>

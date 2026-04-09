@@ -80,14 +80,14 @@ const Projects = () => {
     active === "All" ? projects : projects.filter((p) => p.category === active)
 
   return (
-    <div id="projects" className="bg-gray-50 py-16 px-8">
+    <div id="projects" className="dark:bg-[#353A3A] bg-gray-50 py-16 px-8">
       <div className="container mx-auto px-6 lg:px-24">
         {/* Heading */}
         <div className="text-center mb-10" data-aos="fade-up">
-          <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-2">
+          <h3 className="text-sm font-semibold uppercase tracking-widest dark:text-gray-400 text-gray-500 mb-2">
             My Work
           </h3>
-          <h2 className="text-4xl font-bold text-[#353A3A] mb-3">Projects</h2>
+          <h2 className="text-4xl font-bold dark:text-white text-[#1a1a1a] mb-3">Projects</h2>
           <div className="w-16 h-1 bg-[#eab949] mx-auto rounded-full" />
         </div>
 
@@ -104,7 +104,7 @@ const Projects = () => {
               className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-200 cursor-pointer ${
                 active === filter
                   ? "bg-[#eab949] text-white shadow-[0_0_14px_rgba(234,185,73,0.4)]"
-                  : "bg-white text-[#353A3A] border border-gray-300 hover:border-[#eab949] hover:text-[#eab949]"
+                  : "dark:bg-[#2a2e2e] bg-white dark:text-white text-[#1a1a1a] dark:border-white/20 border-gray-300 border hover:border-[#eab949] hover:text-[#eab949]"
               }`}
             >
               {filter}
@@ -119,7 +119,7 @@ const Projects = () => {
               key={id}
               data-aos="fade-up"
               data-aos-delay={i * 80}
-              className="bg-white border border-transparent rounded-xl shadow-md overflow-hidden flex flex-col hover:border-[#eab949] hover:shadow-[0_0_24px_rgba(234,185,73,0.2)] hover:-translate-y-1 transition-all duration-300"
+              className="dark:bg-[#2a2e2e] bg-white border border-transparent rounded-xl shadow-md overflow-hidden flex flex-col hover:border-[#eab949] hover:shadow-[0_0_24px_rgba(234,185,73,0.2)] hover:-translate-y-1 transition-all duration-300"
             >
               {/* Color bar */}
               <div className="h-1 bg-gradient-to-r from-[#eab949] to-[#4370d8]" />
@@ -132,10 +132,10 @@ const Projects = () => {
                   {category}
                 </span>
 
-                <h3 className="text-lg font-bold text-[#353A3A] mb-2">
+                <h3 className="text-lg font-bold dark:text-white text-[#1a1a1a] mb-2">
                   {title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="dark:text-gray-400 text-gray-600 text-sm leading-relaxed mb-4">
                   {description}
                 </p>
 
@@ -144,7 +144,7 @@ const Projects = () => {
                   {tools.map((tool) => (
                     <span
                       key={tool}
-                      className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded"
+                      className="dark:bg-[#353A3A] bg-gray-100 dark:text-gray-400 text-gray-600 text-xs px-2 py-1 rounded"
                     >
                       {tool}
                     </span>
@@ -152,12 +152,12 @@ const Projects = () => {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-4 pt-3 border-t border-gray-100">
+                <div className="flex gap-4 pt-3 dark:border-t dark:border-white/10 border-t border-gray-100">
                   <a
                     href={github}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-[#eab949] transition-colors duration-200 font-medium"
+                    className="flex items-center gap-1.5 text-sm dark:text-gray-400 text-gray-500 hover:text-[#eab949] transition-colors duration-200 font-medium"
                   >
                     <FiGithub /> GitHub
                   </a>
@@ -165,7 +165,7 @@ const Projects = () => {
                     href={live}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-[#4370d8] transition-colors duration-200 font-medium"
+                    className="flex items-center gap-1.5 text-sm dark:text-gray-400 text-gray-500 hover:text-[#4370d8] transition-colors duration-200 font-medium"
                   >
                     <FiExternalLink /> Live Demo
                   </a>

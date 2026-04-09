@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
+import { ThemeProvider } from "./context/ThemeContext"
 import Navbar from "./assets/components/Navbar"
 import Hero from "./assets/components/Hero"
 import About from "./assets/components/About"
@@ -22,16 +23,18 @@ const App = () => {
   }, [])
 
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Services />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="transition-colors duration-300">
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Services />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   )
 }
 

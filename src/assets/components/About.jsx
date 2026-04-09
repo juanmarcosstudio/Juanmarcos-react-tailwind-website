@@ -36,7 +36,7 @@ const stats = [
 
 const About = () => {
   return (
-    <div id="about" className="bg-[#353A3A]">
+    <div id="about" className="dark:bg-[#353A3A] bg-[#f5f5f0]">
       <div className="container mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center justify-between py-20 gap-12">
 
         {/* ── Left: Image ── */}
@@ -59,13 +59,13 @@ const About = () => {
           </h3>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
+          <h2 className="text-4xl md:text-5xl font-bold dark:text-white text-[#1a1a1a] mb-3">
             About Me
           </h2>
           <div className="w-16 h-1 bg-[#eab949] rounded-full mb-6" />
 
           {/* Bio */}
-          <p className="text-gray-300 mb-8 leading-relaxed text-sm md:text-base">
+          <p className="dark:text-gray-300 text-gray-600 mb-8 leading-relaxed text-sm md:text-base">
             Howdy! I am Jhon Mark from the Philippines. I build responsive
             websites through{" "}
             <span className="text-[#eab949] font-medium">Web Development</span>,
@@ -80,17 +80,17 @@ const About = () => {
           </p>
 
           {/* Stats row */}
-          <div className="flex items-center gap-6 mb-8 pb-6 border-b border-white/10">
+          <div className="flex items-center gap-6 mb-8 pb-6 dark:border-b dark:border-white/10 border-b border-gray-200">
             {stats.map(({ number, label }, i) => (
               <div key={label} className="flex items-center gap-6">
                 <div>
                   <p className="text-2xl font-extrabold text-[#eab949] leading-none">
                     {number}
                   </p>
-                  <p className="text-xs text-gray-400 mt-0.5">{label}</p>
+                  <p className="text-xs dark:text-gray-400 text-gray-500 mt-0.5">{label}</p>
                 </div>
                 {i < stats.length - 1 && (
-                  <div className="w-px h-8 bg-white/15" />
+                  <div className="w-px h-8 dark:bg-white/15 bg-gray-300" />
                 )}
               </div>
             ))}
@@ -101,14 +101,14 @@ const About = () => {
             {featureCards.map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="flex items-start gap-3 bg-[#2a2e2e] border border-white/10 hover:border-[#eab949]/50 rounded-xl p-4 transition-colors duration-300"
+                className="flex items-start gap-3 dark:bg-[#2a2e2e] bg-white dark:border-white/10 border-gray-200 border rounded-xl p-4 hover:border-[#eab949]/50 transition-colors duration-300"
               >
                 <Icon className="text-[#eab949] text-2xl flex-shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-white font-semibold text-xs leading-snug">
+                  <h4 className="dark:text-white text-[#1a1a1a] font-semibold text-xs leading-snug">
                     {title}
                   </h4>
-                  <p className="text-gray-400 text-xs mt-0.5">{desc}</p>
+                  <p className="dark:text-gray-400 text-gray-500 text-xs mt-0.5">{desc}</p>
                 </div>
               </div>
             ))}
