@@ -8,7 +8,7 @@ html {
 
 /* Active nav link (set by react-scroll spy) */
 .nav-active {
-  color: #eab949 !important;
-  border-bottom: 2px solid #eab949;
+  color: #F5A623 !important;
+  border-bottom: 2px solid #F5A623;
   padding-bottom: 2px;
 }
