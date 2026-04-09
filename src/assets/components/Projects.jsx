@@ -1,0 +1,175 @@
+import { useState } from "react"
+import { FiGithub, FiExternalLink } from "react-icons/fi"
+
+// Replace these with your real projects
+const projects = [
+  {
+    id: 1,
+    title: "E-Commerce Store",
+    category: "Web Dev",
+    description:
+      "A full-stack e-commerce app with product listings, cart, and checkout built with React and Node.js.",
+    tools: ["React", "Node.js", "Express", "MongoDB"],
+    github: "#",
+    live: "#",
+  },
+  {
+    id: 2,
+    title: "Restaurant Landing Page",
+    category: "Web Design",
+    description:
+      "A visually rich landing page for a local restaurant featuring a menu, gallery, and reservation form.",
+    tools: ["Figma", "HTML", "Tailwind CSS"],
+    github: "#",
+    live: "#",
+  },
+  {
+    id: 3,
+    title: "Business Portfolio Site",
+    category: "WordPress",
+    description:
+      "A custom WordPress site for a small business with Elementor page builder and WooCommerce integration.",
+    tools: ["WordPress", "Elementor", "WooCommerce"],
+    github: "#",
+    live: "#",
+  },
+  {
+    id: 4,
+    title: "Task Manager App",
+    category: "Web Dev",
+    description:
+      "A productivity app with drag-and-drop task boards, user auth, and real-time updates.",
+    tools: ["React", "Node.js", "Express"],
+    github: "#",
+    live: "#",
+  },
+  {
+    id: 5,
+    title: "Creative Agency Site",
+    category: "Web Design",
+    description:
+      "A bold, modern design for a creative agency with animated sections and a portfolio showcase.",
+    tools: ["Figma", "React", "Tailwind CSS"],
+    github: "#",
+    live: "#",
+  },
+  {
+    id: 6,
+    title: "Blog Platform",
+    category: "WordPress",
+    description:
+      "A custom-themed WordPress blog with optimized SEO, responsive layout, and a contact plugin.",
+    tools: ["WordPress", "PHP", "Custom Theme"],
+    github: "#",
+    live: "#",
+  },
+]
+
+const filters = ["All", "Web Dev", "Web Design", "WordPress"]
+
+const categoryColors = {
+  "Web Dev": "bg-[#4370d8] text-white",
+  "Web Design": "bg-[#eab949] text-white",
+  WordPress: "bg-[#353A3A] text-white",
+}
+
+const Projects = () => {
+  const [active, setActive] = useState("All")
+
+  const filtered =
+    active === "All" ? projects : projects.filter((p) => p.category === active)
+
+  return (
+    <div id="projects" className="bg-gray-50 py-16 px-8">
+      <div className="container mx-auto px-6 lg:px-24">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <h3 className="text-[#353A3A] font-semibold text-lg uppercase mb-2">
+            My Work
+          </h3>
+          <h2 className="text-4xl font-bold text-[#eab949]">Projects</h2>
+        </div>
+
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              onClick={() => setActive(filter)}
+              className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-200 cursor-pointer ${
+                active === filter
+                  ? "bg-[#eab949] text-white shadow-md"
+                  : "bg-white text-[#353A3A] border border-gray-300 hover:border-[#eab949] hover:text-[#eab949]"
+              }`}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+
+        {/* Project Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filtered.map(({ id, title, category, description, tools, github, live }) => (
+            <div
+              key={id}
+              className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            >
+              {/* Color bar */}
+              <div className="h-2 bg-[#eab949]" />
+
+              <div className="p-6 flex flex-col flex-1">
+                {/* Category badge */}
+                <span
+                  className={`self-start text-xs font-semibold px-3 py-1 rounded-full mb-3 ${categoryColors[category]}`}
+                >
+                  {category}
+                </span>
+
+                <h3 className="text-lg font-bold text-[#353A3A] mb-2">
+                  {title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  {description}
+                </p>
+
+                {/* Tools */}
+                <div className="flex flex-wrap gap-2 mb-4 mt-auto">
+                  {tools.map((tool) => (
+                    <span
+                      key={tool}
+                      className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Links */}
+                <div className="flex gap-4 pt-2 border-t border-gray-100">
+                  <a
+                    href={github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-1 text-sm text-[#353A3A] hover:text-[#eab949] transition-colors duration-200 font-medium"
+                  >
+                    <FiGithub /> GitHub
+                  </a>
+                  <a
+                    href={live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-1 text-sm text-[#353A3A] hover:text-[#eab949] transition-colors duration-200 font-medium"
+                  >
+                    <FiExternalLink /> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Projects
