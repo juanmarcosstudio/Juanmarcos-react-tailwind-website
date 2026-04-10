@@ -16,31 +16,22 @@ const useTypingAnimation = () => {
 
   useEffect(() => {
     if (isPaused) return;
-
     const currentWord = roles[wordIndex];
     const speed = isDeleting ? 45 : 85;
-
     const timeout = setTimeout(() => {
       if (!isDeleting) {
         const next = currentWord.slice(0, displayText.length + 1);
         setDisplayText(next);
         if (next === currentWord) {
           setIsPaused(true);
-          setTimeout(() => {
-            setIsPaused(false);
-            setIsDeleting(true);
-          }, 1600);
+          setTimeout(() => { setIsPaused(false); setIsDeleting(true); }, 1600);
         }
       } else {
         const next = currentWord.slice(0, displayText.length - 1);
         setDisplayText(next);
-        if (next === "") {
-          setIsDeleting(false);
-          setWordIndex((prev) => (prev + 1) % roles.length);
-        }
+        if (next === "") { setIsDeleting(false); setWordIndex((prev) => (prev + 1) % roles.length); }
       }
     }, speed);
-
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, wordIndex, isPaused]);
 
@@ -73,11 +64,9 @@ const Hero = () => {
       }}
     >
       {/* Dark overlay 1 */}
-      <div className="absolute inset-0" style={{ background: "rgba(0, 0, 0, 0.72)" }} />
-
-      {/* Dark overlay 2 */}
-      <div className="absolute inset-0" style={{ background: "rgba(44, 51, 51, 0.55)" }} />
-
+      <div className="absolute inset-0" style={{ background: "rgba(20, 26, 26, 0.78)" }} />
+      {/* Dark green overlay 2 */}
+      <div className="absolute inset-0" style={{ background: "rgba(20, 42, 36, 0.50)" }} />
       {/* Dot grid overlay */}
       <div
         className="absolute inset-0"
@@ -86,7 +75,6 @@ const Hero = () => {
           backgroundSize: "28px 28px",
         }}
       />
-
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F5A623] to-transparent opacity-60" />
 
@@ -96,9 +84,9 @@ const Hero = () => {
         data-aos="fade-up"
       >
         {/* Available badge */}
-        <div className="inline-flex items-center gap-2 bg-[#1e2a2a]/80 border border-[#F5A623]/30 rounded-full px-4 py-1.5 mb-5 mx-auto">
+        <div className="inline-flex items-center gap-2 bg-[rgba(245,166,35,0.10)] border border-[rgba(245,166,35,0.3)] rounded-full px-4 py-1.5 mb-5 mx-auto">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          <span className="text-xs text-[#8A9BA8] font-medium tracking-wide">
+          <span className="text-xs text-[#F5A623] font-medium tracking-wide">
             Available for freelance
           </span>
         </div>
@@ -115,13 +103,13 @@ const Hero = () => {
         </h1>
 
         {/* Typing animation */}
-        <p className="text-lg md:text-xl font-semibold text-[#2E5D57] mb-5 h-7">
+        <p className="text-lg md:text-xl font-semibold text-[#4a9e96] mb-5 h-7">
           {displayText}
-          <span className="inline-block w-0.5 h-5 bg-[#2E5D57] ml-0.5 align-middle animate-pulse" />
+          <span className="inline-block w-0.5 h-5 bg-[#4a9e96] ml-0.5 align-middle animate-pulse" />
         </p>
 
         {/* Description */}
-        <p className="text-sm md:text-base text-[#8A9BA8] max-w-xl mx-auto leading-relaxed mb-7">
+        <p className="text-sm md:text-base text-[#b8c8c4] max-w-xl mx-auto leading-relaxed mb-7">
           I am learning advanced JavaScript, improving my React.js skills for
           building interactive user interfaces, and working on backend
           development with Node.js and Express to create efficient and scalable
@@ -134,14 +122,14 @@ const Hero = () => {
             to="contact"
             smooth={true}
             duration={500}
-            className="bg-[#F5A623] text-[#2C3333] font-bold px-8 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(245,166,35,0.55)] hover:scale-105 transition-all duration-200 cursor-pointer text-sm"
+            className="bg-[#F5A623] text-[#1a1a1a] font-bold px-8 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(245,166,35,0.40)] hover:scale-105 transition-all duration-200 cursor-pointer text-sm"
           >
             Contact Me
           </Link>
           <a
             href={CV}
             download="jhonmarkresume.pdf"
-            className="flex items-center gap-2 border-2 border-[#2E5D57] text-[#2E5D57] font-semibold px-6 py-2 rounded-full hover:bg-[#2E5D57] hover:text-[#F5F5F5] hover:shadow-[0_0_15px_rgba(46,93,87,0.45)] transition-all duration-200 text-sm"
+            className="flex items-center gap-2 border-2 border-[#4a9e96] text-[#4a9e96] font-semibold px-6 py-2 rounded-full hover:bg-[#4a9e96] hover:text-[#F5F5F5] hover:shadow-[0_0_15px_rgba(74,158,150,0.35)] transition-all duration-200 text-sm"
           >
             Download CV <BsDownload />
           </a>
@@ -156,7 +144,7 @@ const Hero = () => {
               target="_blank"
               rel="noreferrer"
               aria-label={label}
-              className="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 text-[#8A9BA8] hover:border-[#F5A623] hover:text-[#F5A623] hover:shadow-[0_0_10px_rgba(245,166,35,0.35)] transition-all duration-200"
+              className="w-9 h-9 flex items-center justify-center rounded-full border border-white/15 text-[#7a9490] hover:border-[#F5A623] hover:text-[#F5A623] hover:shadow-[0_0_10px_rgba(245,166,35,0.35)] transition-all duration-200"
             >
               <Icon size={16} />
             </a>
@@ -169,11 +157,9 @@ const Hero = () => {
             <div key={label} className="flex items-center gap-8">
               <div className="text-center">
                 <p className="text-2xl font-bold text-[#F5A623] leading-none">{number}</p>
-                <p className="text-xs text-[#8A9BA8] mt-0.5">{label}</p>
+                <p className="text-xs text-[#7a9490] mt-0.5">{label}</p>
               </div>
-              {i < stats.length - 1 && (
-                <div className="w-px h-8 bg-white/15" />
-              )}
+              {i < stats.length - 1 && <div className="w-px h-8 bg-white/15" />}
             </div>
           ))}
         </div>

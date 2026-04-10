@@ -1,44 +1,33 @@
 import {
-  SiReact,
-  SiJavascript,
-  SiNodedotjs,
-  SiHtml5,
-  SiCss3,
-  SiTailwindcss,
-  SiFigma,
-  SiGit,
-  SiMongodb,
-  SiPhp,
-  SiExpress,
+  SiReact, SiJavascript, SiNodedotjs, SiHtml5, SiCss3,
+  SiTailwindcss, SiFigma, SiGit, SiMongodb, SiPhp, SiExpress,
 } from "react-icons/si"
 import { FaWordpress } from "react-icons/fa"
 
 const skills = [
-  { name: "React", icon: SiReact },
-  { name: "JavaScript", icon: SiJavascript },
-  { name: "Node.js", icon: SiNodedotjs },
-  { name: "Express", icon: SiExpress },
-  { name: "HTML5", icon: SiHtml5 },
-  { name: "CSS3", icon: SiCss3 },
-  { name: "Tailwind CSS", icon: SiTailwindcss },
-  { name: "WordPress", icon: FaWordpress },
-  { name: "Figma", icon: SiFigma },
-  { name: "Git", icon: SiGit },
-  { name: "MongoDB", icon: SiMongodb },
-  { name: "PHP", icon: SiPhp },
+  { name: "React", icon: SiReact, dot: "#F5A623" },
+  { name: "JavaScript", icon: SiJavascript, dot: "#F5A623" },
+  { name: "Node.js", icon: SiNodedotjs, dot: "#4a9e96" },
+  { name: "Express", icon: SiExpress, dot: "#4a9e96" },
+  { name: "HTML5", icon: SiHtml5, dot: "#F5A623" },
+  { name: "CSS3", icon: SiCss3, dot: "#F5A623" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, dot: "#4a9e96" },
+  { name: "WordPress", icon: FaWordpress, dot: "#2E5D57" },
+  { name: "Figma", icon: SiFigma, dot: "#F5A623" },
+  { name: "Git", icon: SiGit, dot: "#4a9e96" },
+  { name: "MongoDB", icon: SiMongodb, dot: "#4a9e96" },
+  { name: "PHP", icon: SiPhp, dot: "#2E5D57" },
 ]
 
 const Skills = () => {
   return (
-    <div id="skills" className="dark:bg-[#2C3333] bg-[#f5f5f0] py-16 px-8">
+    <div id="skills" className="bg-[#ede8de] py-16 px-8">
       <div className="container mx-auto px-6 lg:px-24">
         <div className="text-center mb-12" data-aos="fade-up">
-          <h3 className="text-sm font-semibold uppercase tracking-widest dark:text-[#8A9BA8] text-[#8A9BA8] mb-2">
+          <h3 className="text-sm font-semibold uppercase tracking-widest text-[#666] mb-2">
             What I Work With
           </h3>
-          <h2 className="text-4xl font-bold dark:text-[#F5F5F5] text-[#1a1a1a] mb-3">
-            Skills & Tools
-          </h2>
+          <h2 className="text-4xl font-bold text-[#1a1a1a] mb-3">Skills & Tools</h2>
           <div className="w-16 h-1 bg-[#F5A623] mx-auto rounded-full" />
         </div>
 
@@ -47,13 +36,14 @@ const Skills = () => {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          {skills.map(({ name, icon: Icon }) => (
+          {skills.map(({ name, icon: Icon, dot }) => (
             <div
               key={name}
-              className="group flex items-center gap-3 dark:bg-[#1e2a2a] bg-white dark:border-white/10 border-gray-200 border hover:border-[#F5A623] hover:shadow-[0_0_16px_rgba(245,166,35,0.25)] rounded-full px-5 py-3 transition-all duration-300 cursor-default"
+              className="group flex items-center gap-3 bg-[#e0dbd0] border border-black/[0.07] hover:bg-[#d6d0c5] hover:border-[rgba(212,137,26,0.4)] hover:shadow-[0_0_16px_rgba(212,137,26,0.20)] rounded-full px-5 py-3 transition-all duration-300 cursor-default"
             >
-              <Icon className="text-xl dark:text-[#8A9BA8] text-[#8A9BA8] group-hover:text-[#F5A623] transition-colors duration-300" />
-              <span className="dark:text-[#F5F5F5] text-[#1a1a1a] text-sm font-medium">{name}</span>
+              <Icon className="text-xl text-[#666] group-hover:text-[#d4891a] transition-colors duration-300" />
+              <span className="text-[#3d3d3d] text-sm font-medium">{name}</span>
+              <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: dot }} />
             </div>
           ))}
         </div>
