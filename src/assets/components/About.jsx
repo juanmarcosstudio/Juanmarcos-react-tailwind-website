@@ -13,9 +13,8 @@ const featureCards = [
 ]
 
 const stats = [
-  { number: "2+", label: "Yrs Experience" },
-  { number: "10+", label: "Projects" },
-  { number: "3", label: "Services" },
+  { number: "2+", label: "Years of Experience" },
+  { number: "10+", label: "Projects Delivered" },
 ]
 
 const About = () => {
@@ -46,15 +45,18 @@ const About = () => {
           <div className="w-16 h-1 bg-[#F5A623] rounded-full mb-6" />
 
           <p className="text-[#3d3d3d] mb-8 leading-relaxed text-sm md:text-base">
-            Howdy! I am Jhon Mark from the Philippines. I build responsive
-            websites through{" "}
+            Hey! I'm Jhon Mark, a web developer and designer based in the
+            Philippines. I help clients bring their ideas to life through
+            responsive{" "}
             <span className="text-[#d4891a] font-medium">Web Development</span>,
-            craft clean and modern interfaces with{" "}
+            clean UI/UX{" "}
             <span className="text-[#d4891a] font-medium">Web Design</span>, and
-            set up powerful sites using{" "}
-            <span className="text-[#d4891a] font-medium">WordPress Development</span>
-            . I love spending time in coffee shops and always bring dedication
-            and a positive attitude to every project.
+            reliable{" "}
+            <span className="text-[#d4891a] font-medium">WordPress</span>{" "}
+            solutions. I take pride in writing clean code, meeting deadlines,
+            and making the process as smooth as possible for everyone I work
+            with. When I'm not building websites, you'll probably find me at a
+            coffee shop with a good cup and my laptop.
           </p>
 
           {/* Stats row */}

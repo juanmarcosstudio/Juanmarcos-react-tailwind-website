@@ -6,7 +6,7 @@ import bgImage from "../bg.png";
 import CV from "../cv.pdf";
 import { Link } from "react-scroll";
 
-const roles = ["Web Developer", "Web Designer", "WordPress Developer"];
+const roles = ["Web Developer & Designer", "WordPress Developer", "SEO Specialist"];
 
 const useTypingAnimation = () => {
   const [displayText, setDisplayText] = useState("");
@@ -39,8 +39,8 @@ const useTypingAnimation = () => {
 };
 
 const stats = [
-  { number: "2+", label: "Years Exp." },
-  { number: "10+", label: "Projects Done" },
+  { number: "2+", label: "Years of Experience" },
+  { number: "10+", label: "Projects Delivered" },
   { number: "3", label: "Services Offered" },
 ];
 
@@ -87,13 +87,13 @@ const Hero = () => {
         <div className="inline-flex items-center gap-2 bg-[rgba(245,166,35,0.10)] border border-[rgba(245,166,35,0.3)] rounded-full px-4 py-1.5 mb-5 mx-auto">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
           <span className="text-xs text-[#F5A623] font-medium tracking-wide">
-            Available for freelance
+            Available for Freelance
           </span>
         </div>
 
         {/* Greeting */}
         <p className="text-sm md:text-base font-semibold uppercase tracking-widest text-[#F5A623] mb-1">
-          Hello, I am
+          Hi, I'm
         </p>
 
         {/* Name */}
@@ -110,10 +110,9 @@ const Hero = () => {
 
         {/* Description */}
         <p className="text-sm md:text-base text-[#b8c8c4] max-w-xl mx-auto leading-relaxed mb-7">
-          I am learning advanced JavaScript, improving my React.js skills for
-          building interactive user interfaces, and working on backend
-          development with Node.js and Express to create efficient and scalable
-          applications.
+          I build fast, clean, and user-friendly websites — from custom React
+          apps to WordPress sites. Currently leveling up my JavaScript, React,
+          and Node.js skills to deliver even better work for my clients.
         </p>
 
         {/* CTA Buttons */}
@@ -124,7 +123,7 @@ const Hero = () => {
             duration={500}
             className="bg-[#F5A623] text-[#1a1a1a] font-bold px-8 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(245,166,35,0.40)] hover:scale-105 transition-all duration-200 cursor-pointer text-sm"
           >
-            Contact Me
+            Get In Touch
           </Link>
           <a
             href={CV}
