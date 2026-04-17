@@ -8,14 +8,14 @@ const projects = [
     tools: ["React", "Node.js", "Express", "MongoDB"], github: "#", live: "#",
   },
   {
-    id: 2, title: "Restaurant Landing Page", category: "Web Design",
-    description: "A visually rich landing page for a local restaurant featuring a menu, gallery, and reservation form.",
-    tools: ["Figma", "HTML", "Tailwind CSS"], github: "#", live: "#",
+    id: 2, title: "Mason Makes Money Fund", category: "Web Design",
+    description: "A clean and professional website designed for a financial fund organization, focused on clear messaging, trust-building layout, and easy navigation for visitors.",
+    tools: ["UI/UX", "Web Design", "HTML", "CSS"], github: null, live: "https://masonmakesmoneyfund.org/",
   },
   {
-    id: 3, title: "Business Portfolio Site", category: "WordPress",
-    description: "A custom WordPress site for a small business with Elementor page builder and WooCommerce integration.",
-    tools: ["WordPress", "Elementor", "WooCommerce"], github: "#", live: "#",
+    id: 3, title: "Mason Makes Money Fund", category: "WordPress",
+    description: "A fully built WordPress website for a financial fund organization, featuring a custom layout, optimized content structure, and a professional look that builds credibility.",
+    tools: ["WordPress", "PHP", "CSS"], github: null, live: "https://masonmakesmoneyfund.org/",
   },
   {
     id: 4, title: "Task Manager App", category: "Web Dev",
@@ -23,14 +23,14 @@ const projects = [
     tools: ["React", "Node.js", "Express"], github: "#", live: "#",
   },
   {
-    id: 5, title: "Creative Agency Site", category: "Web Design",
-    description: "A bold, modern design for a creative agency with animated sections and a portfolio showcase.",
-    tools: ["Figma", "React", "Tailwind CSS"], github: "#", live: "#",
+    id: 5, title: "Finance Helper", category: "Web Design",
+    description: "A modern financial services website designed with a user-friendly interface to help visitors easily understand and access personal finance tools and resources.",
+    tools: ["UI/UX", "Web Design", "HTML", "CSS"], github: null, live: "https://financeshelper.com/",
   },
   {
-    id: 6, title: "Blog Platform", category: "WordPress",
-    description: "A custom-themed WordPress blog with optimized SEO, responsive layout, and a contact plugin.",
-    tools: ["WordPress", "PHP", "Custom Theme"], github: "#", live: "#",
+    id: 6, title: "Finance Helper", category: "WordPress",
+    description: "A WordPress-powered financial website built with a clean theme, custom styling, and organized content to make financial help easily accessible to users.",
+    tools: ["WordPress", "PHP", "CSS"], github: null, live: "https://financeshelper.com/",
   },
 ]
 
@@ -99,14 +99,18 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex gap-4 pt-3 border-t border-white/10">
-                  <a href={github} target="_blank" rel="noreferrer"
-                    className="flex items-center gap-1.5 text-sm text-[#4a9e96] hover:text-[#F5A623] transition-colors duration-200 font-medium">
-                    <FiGithub /> GitHub
-                  </a>
-                  <a href={live} target="_blank" rel="noreferrer"
-                    className="flex items-center gap-1.5 text-sm text-[#4a9e96] hover:text-[#F5A623] transition-colors duration-200 font-medium">
-                    <FiExternalLink /> Live Demo
-                  </a>
+                  {github && (
+                    <a href={github} target="_blank" rel="noreferrer"
+                      className="flex items-center gap-1.5 text-sm text-[#4a9e96] hover:text-[#F5A623] transition-colors duration-200 font-medium">
+                      <FiGithub /> GitHub
+                    </a>
+                  )}
+                  {live && (
+                    <a href={live} target="_blank" rel="noreferrer"
+                      className="flex items-center gap-1.5 text-sm text-[#4a9e96] hover:text-[#F5A623] transition-colors duration-200 font-medium">
+                      <FiExternalLink /> {category === "Web Dev" ? "Live Demo" : "Visit Website"}
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
